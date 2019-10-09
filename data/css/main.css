@@ -48,3 +48,85 @@ table {
 }
 
 /* custom style */
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	
+}
+
+
+.nav {
+    margin-top: 1em;
+	/* position: relative;
+	width: 100%; */
+    background: rgb(255, 190, 61);
+    text-align: center;
+    /* height: 5em; */
+}
+
+.nav-li {
+	display: inline-block;
+	width: 33%;
+    padding: 1.5em 1.5em;
+}
+
+.nav-li:hover {
+    background: rgb(253, 222, 159);	
+}
+
+.nav-li:hover a {
+    color:rgb(0, 0, 0);
+}
+
+
+.nav-a {
+	color:rgb(255, 255, 255);
+	text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 0.3em;
+}
+
+.contact { 
+    padding: 1em 3em 2em 3em;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+}
+
+.contact li {
+    padding: 0.3em;
+}
+
+.contact li:nth-child(n+2) {
+    margin-left: 2em;
+}
+
+.contact li:nth-child(n+2) a{
+    color: rgb(255,255,255)
+}
+
+.contact li:nth-child(n+2):hover a {
+    color: rgb(0, 0, 0)
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+main {
+    margin: 2em;
+    min-height: 30em;
+    background: rgba(83, 203, 203, 0.3);
+}
+
+main p {
+    padding: 2em;
+}
+
+footer {
+    background: #09b0b3;
+}
