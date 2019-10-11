@@ -53,12 +53,6 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-a:hover {
-    color: rgb(20, 153, 153);
-    border-bottom: 0.1em solid;
-    padding-bottom: 0.1em
-}
-
 .nav {
     margin-top: 1em;
     background: rgb(255, 190, 61);
@@ -67,8 +61,9 @@ a:hover {
 
 .nav-li {
 	display: inline-block;
-	width: 25%;
-    padding: 1.5em 1.5em;
+	width: 23%;
+    padding: 1em 1em;
+    white-space: nowrap;
 }
 
 .nav-li:hover {
@@ -79,12 +74,11 @@ a:hover {
     color:rgb(0, 0, 0);
 }
 
-
 .nav-a {
 	color:rgb(255, 255, 255);
 	text-decoration: none;
     font-size: 1.2em;
-    letter-spacing: 0.3em;
+    letter-spacing: 0.1em;
 }
 
 .contact { 
@@ -98,27 +92,15 @@ a:hover {
     padding: 0.3em;
 }
 
-.contact li:nth-child(n+2) {
-    margin-left: 2em;
-}
-
-.contact li:nth-child(n+2) a{
-    color: rgb(255,255,255)
-}
-
-.contact li:nth-child(n+2):hover a {
-    color: rgb(0, 0, 0)
-}
-
 a {
     text-decoration: none;
     color: black;
 }
 
 main {
-    margin: 2em;
-    padding: 2em;
-    min-height: 30em;
+    margin-top: 1em;
+    padding: 1.5em;
+    min-height: 25em;
     background: rgba(83, 203, 203, 0.3);
     /* background: #53cbcb; */
 }
@@ -140,7 +122,7 @@ h3 {
     padding: 1em;
 }
 
-.project {
+.project:nth-child(n+2) {
     padding-top: 2em;
 }
 
@@ -148,3 +130,44 @@ h3 {
     padding: 1em 0 0 2em;
 }
 
+
+
+@media only screen and (min-width: 700px) {
+    .project {
+        padding-top: 2em;
+    }
+    main {
+        margin: 2em;
+        padding: 2em;
+        min-height: 30em;
+        background: rgba(83, 203, 203, 0.3);
+        /* background: #53cbcb; */
+    }
+    .nav-li {
+        display: inline-block;
+        width: 25%;
+        padding: 1.5em 1.5em;
+    }
+    .nav-a {
+        color:rgb(255, 255, 255);
+        text-decoration: none;
+        font-size: 1.2em;
+        letter-spacing: 0.3em;
+    }
+    .project ul li a:hover {
+        color: rgb(20, 153, 153);
+        border-bottom: 0.1em solid;
+        padding-bottom: 0.1em
+    }
+    .contact li:nth-child(n+2) {
+        margin-left: 2em;
+    }
+    
+    .contact li:nth-child(n+2) a{
+        color: rgb(255,255,255)
+    }
+    
+    .contact li:nth-child(n+2):hover a {
+        color: rgb(0, 0, 0)
+    }
+}
