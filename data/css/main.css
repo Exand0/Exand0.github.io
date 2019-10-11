@@ -53,6 +53,12 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+a:hover {
+    color: rgb(20, 153, 153);
+    border-bottom: 0.1em solid;
+    padding-bottom: 0.1em
+}
+
 .nav {
     margin-top: 1em;
     background: rgb(255, 190, 61);
@@ -114,6 +120,7 @@ main {
     padding: 2em;
     min-height: 30em;
     background: rgba(83, 203, 203, 0.3);
+    /* background: #53cbcb; */
 }
 
 main p {
@@ -131,5 +138,13 @@ h3 {
 
 .copyright {
     padding: 1em;
+}
+
+.project {
+    padding-top: 2em;
+}
+
+.project ul li {
+    padding: 1em 0 0 2em;
 }
 
