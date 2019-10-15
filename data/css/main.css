@@ -28,9 +28,7 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
-body {
-	line-height: 1;
-}
+
 ol, ul {
 	list-style: none;
 }
@@ -66,14 +64,6 @@ html, body {
     white-space: nowrap;
 }
 
-.nav-li:hover {
-    background: rgb(253, 222, 159);	
-}
-
-.nav-li:hover a {
-    color:rgb(0, 0, 0);
-}
-
 .nav-a {
 	color:rgb(255, 255, 255);
 	text-decoration: none;
@@ -97,12 +87,20 @@ a {
     color: black;
 }
 
+
+footer {
+    background: #09b0b3;
+}
+
+.copyright {
+    padding: 1em;
+}
+
 main {
     margin-top: 1em;
-    padding: 1.5em;
+    padding-top: 2em;
     min-height: 25em;
     background: rgba(83, 203, 203, 0.3);
-    /* background: #53cbcb; */
 }
 
 main p {
@@ -110,38 +108,77 @@ main p {
     line-height: 2em;
 }
 
-footer {
-    background: #09b0b3;
+.text-block {
+    padding: 1em;
+    background: rgb(114, 214, 214);
+}
+
+.text-block:nth-child(n+2) {
+    margin-top: 2em;
 }
 
 h3 {
+    font-weight: bold;
+}
+
+.project h3 {
     font-size: 1.5em;
 }
 
-.copyright {
-    padding: 1em;
-}
-
-.project:nth-child(n+2) {
-    padding-top: 2em;
+.project h5 {
+    padding-top: 1em;
 }
 
 .project ul li {
-    padding: 1em 0 0 2em;
+    line-height: 1.5;
+}
+
+.project ul {
+    padding: 1em 2em 1em 2em;
+}
+
+.project a {
+    color: rgb(255, 255, 255);
 }
 
 
-
 @media only screen and (min-width: 700px) {
-    .project {
-        padding-top: 2em;
-    }
     main {
-        margin: 2em;
-        padding: 2em;
-        min-height: 30em;
+        margin: 2em 3em 1em 3em;
+        padding: 2em 4em 2em 4em;
+        min-height: 25em;
         background: rgba(83, 203, 203, 0.3);
         /* background: #53cbcb; */
+        /* color: rgb(255, 255, 255); */
+    }
+    
+    .nav-li:hover {
+        background: rgb(253, 222, 159);	
+    }
+    
+    .nav-li:hover a {
+        color:rgb(20, 153, 153);
+    }
+
+    main p {
+        padding: 2em;
+        line-height: 2em;
+    }
+    
+    .project h3 {
+        font-size: 1.5em;
+    }
+
+    .project h5:nth-child(n + 3)  {
+        padding-top: 0em;
+    }
+    
+    .project ul li {
+        line-height: 1.5;
+    }
+    
+    .project ul {
+        padding: 1em 2em 1em 2em;
     }
     .nav-li {
         display: inline-block;
@@ -167,7 +204,8 @@ h3 {
         color: rgb(255,255,255)
     }
     
-    .contact li:nth-child(n+2):hover a {
-        color: rgb(0, 0, 0)
+    .contact li:nth-child(n+2) a:hover {
+        color: rgb(8, 79, 79);
+        border-bottom: 0.1em solid;
     }
 }
