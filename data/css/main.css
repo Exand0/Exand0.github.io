@@ -51,17 +51,32 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.nav {
+nav {
+    padding: 0.7em;
     margin-top: 1em;
     background: rgb(255, 190, 61);
+    text-align: left;
+    position: relative;
+}
+
+.logo {
+    color:rgb(255, 255, 255);
+	text-decoration: none;
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+}
+
+.logo-menu-opened {
+    text-align: center;
+}
+
+.nav-ul {
     text-align: center;
 }
 
 .nav-li {
-	display: inline-block;
-	width: 23%;
+	display: none;
     padding: 1em 1em;
-    white-space: nowrap;
 }
 
 .nav-a {
@@ -69,6 +84,43 @@ html, body {
 	text-decoration: none;
     font-size: 1.2em;
     letter-spacing: 0.1em;
+}
+
+.navbar-container {
+    position: relative;
+}
+
+.nav-li-opened {
+    display: block;
+}
+
+.menu-btn {
+    display: inline-block;
+    width: 2.2em;
+    position: absolute;
+    top: 50%;
+    right: 3%;
+    transform: translateY(-50%);
+}
+
+.menu-btn:before,
+.menu-btn:after {
+    background-color: #fff;
+    content: '';
+    display: block;
+    height: 0.3em;
+    transition: all 200ms ease-in-out;
+}
+.menu-btn:before {
+    box-shadow: 0 0.9em #fff;
+    margin-bottom: 1.5em;
+}
+.menu-btn-active:before {
+    box-shadow: 0 0 #fff;
+    transform: translateY(0.9em) rotate(45deg);
+}
+.menu-btn-active:after{
+    transform: translateY(-0.9em) rotate(-45deg);
 }
 
 .contact { 
@@ -87,7 +139,6 @@ a {
     color: black;
 }
 
-
 footer {
     background: #09b0b3;
 }
@@ -103,30 +154,49 @@ main {
     background: rgba(83, 203, 203, 0.3);
 }
 
-main p {
-    padding: 2em;
-    line-height: 2em;
-}
-
 .text-block {
     padding: 1em;
     background: rgb(114, 214, 214);
+}
+
+.text {
+    padding: 1em 0 1em 0;
 }
 
 .text-block:nth-child(n+2) {
     margin-top: 2em;
 }
 
-h3 {
-    font-weight: bold;
+h1,h2,h3,h4,h5,h6 {
+    /* padding: 1%; */
 }
 
-.project h3 {
+h1 {
+    font-size: 1.75em;
+}
+
+h2 {
     font-size: 1.5em;
 }
 
-.project h5 {
-    padding-top: 1em;
+h3 {
+    font-size: 1.25em;
+}
+
+h4 {
+    font-size: 1em;
+}
+
+h5 {
+    font-size: 0.75em;
+}
+
+h6 {
+    font-size: 0.5em;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-weight: bold;
 }
 
 .project ul li {
@@ -141,32 +211,56 @@ h3 {
     color: rgb(255, 255, 255);
 }
 
+.li-first, .li-second, .li-third {
+    padding-top: 1em;
+    margin: 0 1em 0 1em;
+}
 
-@media only screen and (min-width: 700px) {
+.li-first:last-child {
+    padding-bottom: 1em;
+}
+
+@media only screen and (min-width: 680px) {
+    nav {
+        padding: 0 0 0 1em;
+        white-space: nowrap;
+    }
+    .menu-btn {
+        display: none;
+    }
+    .navbar-container {
+        display: inline-block;
+        white-space: nowrap;
+        width: 20%;
+        
+    }
+    .nav-ul {
+        display: inline-block;
+        width: 70%;
+        text-align: right;
+    }
+    .nav-li {
+        display: inline-block;
+        padding: 1.5em 1em;
+        white-space: nowrap;
+        position: relative;
+    }
+}
+
+@media only screen and (min-width: 720px) {
     main {
         margin: 2em 3em 1em 3em;
         padding: 2em 4em 2em 4em;
         min-height: 25em;
-        background: rgba(83, 203, 203, 0.3);
-        /* background: #53cbcb; */
-        /* color: rgb(255, 255, 255); */
+        background: rgba(83, 203, 203, 0.3);     
     }
-    
+
     .nav-li:hover {
         background: rgb(253, 222, 159);	
     }
     
     .nav-li:hover a {
         color:rgb(20, 153, 153);
-    }
-
-    main p {
-        padding: 2em;
-        line-height: 2em;
-    }
-    
-    .project h3 {
-        font-size: 1.5em;
     }
 
     .project h5:nth-child(n + 3)  {
@@ -182,14 +276,12 @@ h3 {
     }
     .nav-li {
         display: inline-block;
-        width: 25%;
         padding: 1.5em 1.5em;
     }
     .nav-a {
         color:rgb(255, 255, 255);
         text-decoration: none;
-        font-size: 1.2em;
-        letter-spacing: 0.3em;
+
     }
     .project ul li a:hover {
         color: rgb(20, 153, 153);
@@ -208,4 +300,33 @@ h3 {
         color: rgb(8, 79, 79);
         border-bottom: 0.1em solid;
     }
+
+    .li-first, .li-second, .li-third {
+        padding-top: 1em;
+        margin: 0 2em 0 2em;
+    }
+    
+    .li-first:last-child {
+        padding-bottom: 1em;
+    }
+    
+    .text {
+        padding: 1em;
+    }
+
+    .li-first {
+        list-style-type: circle;
+    }
+    
+    .li-second {
+        list-style-type: disc;
+    }
+    
+    .li-third {
+        list-style-type: square;
+    }
+}
+
+@media only screen and (min-width: 820px) {
+
 }
