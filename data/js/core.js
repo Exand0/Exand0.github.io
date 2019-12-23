@@ -21,10 +21,6 @@ function toggleNav() {
     });
 }); */
 
-function smoothScroll(element) {
-
-}
-
 function handleEvent(e) {
     const target = e.target;
     if (!target.closest('nav') && menuBtn.classList.contains('menu-btn-active')) {
