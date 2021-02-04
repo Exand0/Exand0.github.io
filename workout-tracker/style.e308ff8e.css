@@ -1,0 +1,13 @@
+body,
+html,
+#root {
+    height: 100%;
+    display: grid;
+}
+
+.view {
+    margin: auto;
+}
+
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
